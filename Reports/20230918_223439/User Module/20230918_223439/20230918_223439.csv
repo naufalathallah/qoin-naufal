@@ -1,0 +1,23 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+User Module,,,,2023-09-18 22:34:48,2023-09-18 22:34:54,5.800s,PASSED
+,,,,,,,
+Test Cases/User/Get Single User and Post,,,,2023-09-18 22:34:48,2023-09-18 22:34:52,4.010s,PASSED
+"response = sendRequest(findTestObject(""User/Get Single User""))",,,,2023-09-18 22:34:49,2023-09-18 22:34:52,2.893s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.016s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.008s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseText()),,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.023s,PASSED
+email = email,,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.010s,PASSED
+first_name = first_name,,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.001s,PASSED
+email = email,,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.002s,PASSED
+password = first_name,,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.000s,PASSED
+"body = [""email"":email, ""password"":password]",,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.001s,PASSED
+"postResponse = sendRequest(findTestObject(""User/Post Register Success""))",,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.583s,PASSED
+"verifyResponseStatusCode(postResponse, 200)",,,,2023-09-18 22:34:52,2023-09-18 22:34:52,0.003s,PASSED
+,,,,,,,
+Test Cases/User/Get User List,,,,2023-09-18 22:34:52,2023-09-18 22:34:53,0.534s,PASSED
+"response = sendRequest(findTestObject(""User/Get User""))",,,,2023-09-18 22:34:53,2023-09-18 22:34:53,0.225s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-09-18 22:34:53,2023-09-18 22:34:53,0.003s,PASSED
+,,,,,,,
+Test Cases/User/Put Update,,,,2023-09-18 22:34:53,2023-09-18 22:34:54,0.900s,PASSED
+"response = sendRequest(findTestObject(""User/Put Update""))",,,,2023-09-18 22:34:53,2023-09-18 22:34:54,0.556s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-09-18 22:34:54,2023-09-18 22:34:54,0.002s,PASSED
